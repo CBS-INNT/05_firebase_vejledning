@@ -24,6 +24,7 @@ Download filen `demovideo` og se hvordan app'en kan komme til at se ud
    - CarDetails.js
    - CarList.js
 2. Husk at importere de nødvendige komponenter fra node modules, som `Text` fra react native, præcis som I plejer at gøre + lave vores basic funktion
+
 **Tip**
 ```javascript
    import React from "react";
@@ -101,16 +102,18 @@ export const GlobalStyle = StyleSheet.create({
 
 ### Real time database
 1. Gå ind under "Build" og derefter "Realtime database", og tryk "Create database".
+
     <img src="https://github.com/CBS-INNT/05_firebase_vejledning/blob/main/RealtimeFirebase.png"
      alt="Realtime Database"
      width="200">
-2. Vælg Belgium som lokation
-3. Vælg "Test mode" for hurtigt setup
-4. Kopier URL'en der minder om "https://DIT_PROJECT-default-rtdb.europe-west1.firebasedatabase.app" og indsæt i `firebase.js`. Dette er også siden, hvor din database kommer til at være
+3. Vælg Belgium som lokation
+4. Vælg "Test mode" for hurtigt setup
+5. Kopier URL'en der minder om "https://DIT_PROJECT-default-rtdb.europe-west1.firebasedatabase.app" og indsæt i `firebase.js`. Dette er også siden, hvor din database kommer til at være
 
 # Nu til koden i VSC
 ## App.js - Opret React navigation
 1. Importer de nødvendige komponenter, som vi plejer
+
 **Tip**
    ```javascript
       import { NavigationContainer } from "@react-navigation/native";
@@ -120,8 +123,8 @@ export const GlobalStyle = StyleSheet.create({
       import { SafeAreaProvider } from "react-native-safe-area-context";
       import { StyleSheet } from 'react-native';
    ```
-2. Importerer firebase filen
-3. Importer også dine tre screens
+3. Importerer firebase filen
+4. Importer også dine tre screens
 
 ### Stack Navigation
 1. Efter overstående kode på App.js, opret en Stack navigator med `const Stack = createStackNavigator();` i export funktionen (og før return)
@@ -129,7 +132,8 @@ export const GlobalStyle = StyleSheet.create({
    - Vi forstår godt, hvis du undrer dig over, at vi skriver komponent men det er fordi en “screen” er egentlig bare en komponent, der bruges som en skærm i navigationen.
    - Det er vigtigt at CarList placeres øverst ;) (Dette er den første skærm brugeren bliver præsenteret for)
    - Du kan også se eksempler i tidligere øvelser
-      **Tip**
+
+**Tip**
       ```javascript
         const StackNavigation = () => (
           <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -144,6 +148,7 @@ export const GlobalStyle = StyleSheet.create({
 4. Gå nu til return og slet hvad der står der. Opret en `<SafeAreaProvider> </SafeAreaProvider>` med en `<NavigationContainer> </NavigationContainer>` i, som skal wrappe din Tab.navigator --> Se https://reactnavigation.org/docs/bottom-tab-navigator/ & https://reactnavigation.org/docs/navigation-container
 5. I Tab.Navigator wrapperen oprettes to Tab.Screen med name og component, som henholdvis skal være din StackNavigation og AddEditCar
 6. Tilføj et ikon til Home Tab.Screen (husk at Ionicons skal importeres)
+
 **Tip**
 `<Tab.Screen name="Hjem"component={StackNavigation} options={{tabBarIcon: () => <Ionicons name="home" size={20} />,}} />`
 8. Tilføj nu også et ikon til "Add" Screenen, hvor ikon navnet er `add` istedet for home
@@ -244,6 +249,7 @@ export const GlobalStyle = StyleSheet.create({
 
 # AddEditCar.js – tilføj og redigér biler i Realtime Database
 1. Import de nødvendige komponenter som vi plejer. Husk også at importere database og globalStyle
+
 **Tip**
    ```javascript
    import React, { useEffect, useState, useMemo } from "react";
@@ -352,6 +358,7 @@ STÆRKT! Nu har du lavet AddEditCar.js
 
 # CarList.js – Læs og vis biler fra Realtime Database
 1. Importer de nødvendige komponenter som vi plejer + database og style
+
 **Tip**
 ```javascript
    import React, { useEffect, useState } from "react";
@@ -489,7 +496,8 @@ import { ??? as GS } from "../styles/GlobalStyle";
   };
 ```
 7. Hvis ingen data er modtaget (fx direkte navigation uden params), vis en simpel besked.
-**Hint**
+
+**Tip**
 Lav en if statement hvis ingen biler og returnér et tekst komponent, der fortæller, der ingen biler er.
 ```javascript
   if (!bil) {
