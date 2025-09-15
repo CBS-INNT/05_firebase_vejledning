@@ -94,7 +94,7 @@ export const GlobalStyle = StyleSheet.create({
    1. Registrer nu en web applikation. Tryk på ⚙︎ ikonet, "Project settings" og derefter "</>" under "Your apps" - Se billedet herunder:
    <img src="https://github.com/CBS-INNT/05_firebase_vejledning/blob/main/FirebaseOps%C3%A6tning.png"
    alt="Firebase opsætning"
-   width="720">
+   width="520">
    2. Giv applikationen et vilkårligt navn og tryk "Register app"
    3. Følg vejledningen der kommer frem: Kør `npm install firebase` og indsæt koden for Firebase configuration i din firebase.js
    4. Klik på "Continue to console"
@@ -103,7 +103,7 @@ export const GlobalStyle = StyleSheet.create({
 1. Gå ind under "Build" og derefter "Realtime database", og tryk "Create database".
     <img src="https://github.com/CBS-INNT/05_firebase_vejledning/blob/main/RealtimeFirebase.png"
      alt="Realtime Database"
-     width="720">
+     width="200">
 2. Vælg Belgium som lokation
 3. Vælg "Test mode" for hurtigt setup
 4. Kopier URL'en der minder om "https://DIT_PROJECT-default-rtdb.europe-west1.firebasedatabase.app" og indsæt i `firebase.js`. Dette er også siden, hvor din database kommer til at være
