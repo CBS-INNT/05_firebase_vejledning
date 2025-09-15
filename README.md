@@ -24,7 +24,6 @@ https://user-images.githubusercontent.com/48329669/128408720-8449ae85-8722-4f91-
    - CarDetails.js
    - CarList.js
 2. Husk at importere de nødvendige komponenter fra node modules, som `Text` fra react native, præcis som I plejer at gøre + lave vores basic funktion
-
 **Tip**
 ```javascript
    import React from "react";
@@ -523,4 +522,4 @@ Lav en if statement hvis ingen biler og returnér et tekst komponent, der fortæ
 
 Nu burde du se alle bilens informationer og kunne slette din bil. Og du burde kunne gå til edit/add screen
 
-#Tillykke! Din app skulle gerne virke nu :) 
+# Tillykke! Din app skulle gerne virke nu :) 
